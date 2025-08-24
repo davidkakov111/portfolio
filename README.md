@@ -1,69 +1,25 @@
-# React + TypeScript + Vite
+# Step-by-step process to prepare a 3D character for the website
+## 1. Capture your model:
+Use a 3D scanner (Polycam, photos, or video) to create a mesh of your upper body.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 2. Import into Blender:
+Open the mesh in Blender Desktop.
 
-Currently, two official plugins are available:
+## 3. Add Body + Head Bones and Bind:
+In Object Mode → Shift + A → Armature → Single Bone.
+Name it body, place it along the spine up to the base of the neck.
+Enter Edit Mode, select the tip → press E to extrude upward → name this new bone head.
+Back in Object Mode, select the mesh → Shift + select the armature → Ctrl + P → With Automatic Weights.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 4. Weight Paint:
+Paint the head red, body blue, with a smooth gradient on the neck.
+Top menu → Weights → Normalize All to fix overlaps.
 
-## Expanding the ESLint configuration
+## 5. Improve Geometry:
+Select mesh → Edit Mode (Tab) → press 2 (Edge Select).
+Use Ctrl + R to add edge loops around the neck for smoother bending.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 6. Test in Pose Mode:
+Select the armature → switch to Pose Mode.
+Rotate the head bone → head should turn smoothly, neck bends naturally, no gaps.
+If cracks appear → refine weights or add more edge loops.
