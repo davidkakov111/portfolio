@@ -11,10 +11,11 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useRef, useState } from "react";
 
 const sections = [
-  { label: "About", id: "about" },
-  { label: "Projects", id: "projects" },
-  { label: "Contact", id: "contact" },
-];
+  { label: "About", id: "about", block: "start" },
+  { label: "Experience", id: "experience", block: "start" },
+  { label: "Projects", id: "projects", block: "start" },
+  { label: "Contact", id: "contact", block: "start" },
+] as const;
 
 // Top navigation bar component
 export default function Navbar() {
@@ -23,9 +24,9 @@ export default function Navbar() {
     const largeWidth = useMediaQuery("(min-width:600px)");
     
     // Scroll to section by id
-    const scrollTo = (id: string) => {
+    const scrollTo = (id: string, block: "start" | "end") => {
         const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "end" });
+        if (el) el.scrollIntoView({ behavior: "smooth", block });
     };
 
     // Handle scroll to show/hide navbar
@@ -60,7 +61,7 @@ export default function Navbar() {
                     <Toolbar disableGutters sx={{ display: "flex", justifyContent: "space-between" }}>
                         {/* Logo */}
                         <Box 
-                            onClick={() => scrollTo('name')} 
+                            onClick={() => scrollTo('name', 'end')} 
                             sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
                         >
                             <Avatar src="/avatar.png" alt="Logo" sx={{ width: 40, height: 40, mx: 1 }} />
@@ -77,7 +78,7 @@ export default function Navbar() {
                                 <Button
                                     key={s.id}
                                     color="inherit"
-                                    onClick={() => scrollTo(s.id)}
+                                    onClick={() => scrollTo(s.id, s.block)}
                                     sx={{ ml: 2 }}
                                 >
                                     {s.label}

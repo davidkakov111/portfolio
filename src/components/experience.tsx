@@ -1,0 +1,149 @@
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+  TimelineOppositeContent,
+} from "@mui/lab";
+import { Box, Typography, Card, CardContent, Button, Chip } from "@mui/material";
+import { useState } from "react";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+
+// Example data
+const experiences = [
+    {
+        role: "Full Stack Developer",
+        company: "Skyint Ltd.",
+        period: "Apr 2025 - Present",
+        summary: "As a full-stack developer at Skyint Ltd, a company delivering software for the European Space Agency and commercial clients, I developed and architected a complex web platform for automating environmental lab workflows.",
+        description: {listItems: [
+            'Designed and managed the database using PostgreSQL, TimescaleDB, Prisma, and Dravio.',
+            'Built advanced CRUD interfaces for managing chemical and field measurement data.',
+            'Automated DOCX report generation from structured environmental data.',
+            'Developed custom Excel importers for various lab data formats.',
+            'Developed real-time statistical dashboards to monitor pollution levels across locations.',
+            'Reduced manual reporting and data processing time by over 50%.',
+        ], techStack: ['TypeScript', 'Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker']},
+    },
+    {
+        role: "Backend Developer (Freelance)",
+        company: "Nexon",
+        period: "Jun 2024 - Sep 2024",
+        summary: "As a freelance backend developer, I build the backend of the Nexonity community app, a gamified, location-based task platform.",
+        description: {listItems: [
+            'Designed and implemented a modular, scalable architecture using Node.js, NestJS, and PostgreSQL',
+            'Built secure user registration and profile systems',
+            'Managed complex data relationships with Prisma ORM',
+            'Integrated geographical task restrictions for location-based challenges and rewards',
+            'Developed a push notification system to improve user engagement',
+            'Built and maintained a CI/CD pipeline using Docker for seamless deployment',
+            'Ensured backend performance, reliability, and scalability for a growing user base',
+        ], techStack: ['Node.js', 'NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'Docker']},
+    },
+    {
+        role: "Full Stack Developer",
+        company: "Romanian dev agency",
+        period: "May 2024 - Apr 2025",
+        summary: "I contribute to building dynamic web applications for a Romanian software development company, with a focus on eCommerce and content management.",
+        description: {listItems: [
+            'Developed a WordPress-like CMS in Angular to enable users to create custom webshops.',
+            'Designed and implemented backend systems using Node.js, integrating MySQL and PostgreSQL.',
+            'Built custom user registration systems and key backend functionalities.',
+            'Contributed to projects optimizing localized search and eCommerce experiences for local communities.',
+            'Maintained clean, scalable code and ensured system reliability in production.',
+        ], techStack: ['TypeScript', 'Angular', 'Node.js', 'WP', 'PostgreSQL', 'MySQL']},
+    },    
+];
+
+// Experience section component
+export default function Experience() {
+    const [expanded, setExpanded] = useState<Record<number, boolean>>({0: false, 1: false, 2: false});
+
+    return (
+        <Box sx={{ mt: 6 }} id="experience">
+            <Typography
+                variant="h4"
+                sx={{ fontWeight: "bold", textAlign: "center", mb: 4 }}
+            >
+                Experience
+            </Typography>
+
+            <Timeline position="alternate">
+                {experiences.map((exp, index) => (
+                    <TimelineItem key={index}>
+                        {/* Time period */}
+                        <TimelineOppositeContent
+                            sx={{ m: "auto 0", fontSize: { xs: "0.85rem", sm: "1rem", md: "1.2rem" } }}
+                            align="right"
+                            variant="body2"
+                            color="text.secondary"
+                        >
+                            {exp.period}
+                        </TimelineOppositeContent>
+
+                        {/* Line separator */}
+                        <TimelineSeparator>
+                            <TimelineDot color="primary" />
+                            {index !== experiences.length - 1 && <TimelineConnector />}
+                        </TimelineSeparator>
+
+                        {/* Experience details */}
+                        <TimelineContent sx={{ py: "12px", px: 2 }}>
+                            <Card sx={{ borderRadius: 3, boxShadow: 3, textAlign: "left" }}>
+                                <CardContent>
+                                    <Typography variant="h6" fontWeight="bold" sx={{ fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }}>
+                                        {exp.role}
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="text.secondary" sx={{ fontSize: { xs: "0.85rem", sm: "1rem", md: "1.2rem" } }}>
+                                        {exp.company}
+                                    </Typography>
+                                    <Typography variant="body2" sx={{ mt: 1, fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}>
+                                        {exp.summary}
+
+                                        {/* Expandable description */}
+                                        {expanded[index] && <>
+                                            {exp.description.listItems && (
+                                                <Box component="ul" sx={{ mt: 1, pl: 2 }}>
+                                                    {exp.description.listItems.map((item, i) => (
+                                                        <li key={i}>
+                                                            <Typography variant="body2" sx={{ fontSize: { 
+                                                                xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}>{item}</Typography>
+                                                        </li>
+                                                    ))}
+                                                </Box>
+                                            )}
+
+                                            {exp.description.techStack && (
+                                                <Box sx={{ mt: 2, display: "flex", flexWrap: "wrap", gap: 1 }}>
+                                                    {exp.description.techStack.map((tech, i) => (
+                                                        <Chip key={i} label={tech} size="small" color="primary" sx={{
+                                                            fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" },
+                                                            height: { xs: 20, sm: 24, md: 28 },
+                                                        }}/>
+                                                    ))}
+                                                </Box>
+                                            )}
+                                        </>}
+                                    </Typography>
+
+                                    {/* Expand / collapse button */}
+                                    <Button 
+                                        size="small" 
+                                        sx={{ mt: 2 }}
+                                        onClick={() => setExpanded(prev => ({...prev, [index]: !prev[index]}))} 
+                                        endIcon={expanded[index] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                                    >
+                                        {expanded[index] ? "Show Less" : "Show More"}
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </TimelineContent>
+                    </TimelineItem>
+                ))}
+            </Timeline>
+        </Box>
+    );
+}

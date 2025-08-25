@@ -21,7 +21,7 @@ function App() {
       <Navbar />
 
       <Box component="main" sx={{ flex: 1 }}>
-        <Container maxWidth="lg" disableGutters>
+        <Container maxWidth="lg" disableGutters sx={{ p: "5px" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
 
