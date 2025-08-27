@@ -54,7 +54,7 @@ export default function Object3D({largeWidth = true}: {largeWidth: boolean}) {
                 0, // x 
                 1, // y
                 3  // z
-            ], fov: 5 }}
+            ], fov: 11.5 }}
         >
             <ambientLight intensity={0.9} />
             <directionalLight position={[

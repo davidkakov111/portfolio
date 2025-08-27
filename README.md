@@ -15,11 +15,7 @@ Back in Object Mode, select the mesh → Shift + select the armature → Ctrl + 
 Paint the head red, body blue, with a smooth gradient on the neck.
 Top menu → Weights → Normalize All to fix overlaps.
 
-## 5. Improve Geometry:
-Select mesh → Edit Mode (Tab) → press 2 (Edge Select).
-Use Ctrl + R to add edge loops around the neck for smoother bending.
-
-## 6. Test in Pose Mode:
+## 5. Test in Pose Mode:
 Select the armature → switch to Pose Mode.
 Rotate the head bone → head should turn smoothly, neck bends naturally, no gaps.
-If cracks appear → refine weights or add more edge loops.
+If cracks appear → refine weights

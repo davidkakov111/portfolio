@@ -7,7 +7,7 @@ export default function Footer() {
     <AppBar position="static" color="default" elevation={1}>
       <Toolbar sx={{ justifyContent: "center" }}>
         <Typography variant="body2">
-          © {new Date().getFullYear()} David. All rights reserved.
+          © {new Date().getFullYear()} All rights reserved.
         </Typography>
       </Toolbar>
     </AppBar>

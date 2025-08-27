@@ -100,7 +100,7 @@ export default function Experience() {
                                     <Typography variant="subtitle1" color="text.secondary" sx={{ fontSize: { xs: "0.85rem", sm: "1rem", md: "1.2rem" } }}>
                                         {exp.company}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ mt: 1, fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}>
+                                    <Typography component="div" variant="body2" sx={{ mt: 1, fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}>
                                         {exp.summary}
 
                                         {/* Expandable description */}
