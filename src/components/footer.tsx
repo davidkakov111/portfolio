@@ -7,6 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { UpworkIcon } from "./shared";
 import { Container } from "@mui/material";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 // Footer Component
 export default function Footer() {
@@ -15,6 +16,7 @@ export default function Footer() {
     github: "https://github.com/davidkakov111",
     upwork: "https://www.upwork.com/freelancers/~01b1e7ca6298d8da33",
   };
+  const sourceCodeUrl = "https://github.com/davidkakov111/portfolio";
 
   return (
     <Container maxWidth="lg" disableGutters>
@@ -77,6 +79,18 @@ export default function Footer() {
           {/* Copyright */}
           <Typography variant="body2" color="text.secondary">
             © {new Date().getFullYear()} All rights reserved.
+          </Typography>
+
+          {/* Source code */}
+          <Typography variant="body2" align="left" sx={{ mt: 0.5 }}>
+            <a
+              href={sourceCodeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "inherit", display: "flex", alignItems: "center", gap: 4, textDecoration: "underline" }}
+            >
+              View Source Code <OpenInNewIcon sx={{ fontSize: 16 }} />
+            </a>
           </Typography>
         </Toolbar>
       </AppBar>
