@@ -128,8 +128,17 @@ export default function Navbar() {
                             {sections.map((s) => (
                                 <ListItem key={s.id} disablePadding>
                                     <ListItemButton onClick={() => {
-                                        scrollTo(s.id, s.block); 
-                                        setDrawerOpen(false);
+
+
+
+
+                                        try {
+                                            scrollTo(s.id, s.block); 
+                                            setDrawerOpen(false);
+                                            alert(`Navigated to ${s.label}`);
+                                        } catch (error: any) {
+                                            alert(`Error scrolling to section: ${error}`);
+                                        }
                                     }}>
                                         <ListItemText primary={s.label} />
                                     </ListItemButton>
