@@ -27,12 +27,10 @@ export default function Navbar() {
     const largeWidth = useMediaQuery("(min-width:600px)");
     
     // Scroll to section by id
-    const scrollTo = (id: string, block: "start" | "end") => {
+    const scrollTo = (id: string, block: "start" | "end", withDrawer: boolean = false) => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth", block });
-
-        if (!el) alert(`Element with id ${id} not found`);
-    
+        if (withDrawer) setDrawerOpen(false);
     };
 
     // Handle scroll to show/hide navbar
@@ -130,10 +128,7 @@ export default function Navbar() {
                         <List sx={{ width: 200 }}>
                             {sections.map((s) => (
                                 <ListItem key={s.id} disablePadding>
-                                    <ListItemButton onClick={() => {
-                                        scrollTo(s.id, s.block); 
-                                        setDrawerOpen(false);
-                                    }}>
+                                    <ListItemButton onClick={() => scrollTo(s.id, s.block, true)}>
                                         <ListItemText primary={s.label} />
                                     </ListItemButton>
                                 </ListItem>
