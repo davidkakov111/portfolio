@@ -30,6 +30,9 @@ export default function Navbar() {
     const scrollTo = (id: string, block: "start" | "end") => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth", block });
+
+        if (!el) alert(`Element with id ${id} not found`);
+    
     };
 
     // Handle scroll to show/hide navbar
@@ -128,17 +131,8 @@ export default function Navbar() {
                             {sections.map((s) => (
                                 <ListItem key={s.id} disablePadding>
                                     <ListItemButton onClick={() => {
-
-
-
-
-                                        try {
-                                            scrollTo(s.id, s.block); 
-                                            setDrawerOpen(false);
-                                            alert(`Navigated to ${s.label}`);
-                                        } catch (error: any) {
-                                            alert(`Error scrolling to section: ${error}`);
-                                        }
+                                        scrollTo(s.id, s.block); 
+                                        setDrawerOpen(false);
                                     }}>
                                         <ListItemText primary={s.label} />
                                     </ListItemButton>
