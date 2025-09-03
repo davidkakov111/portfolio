@@ -13,10 +13,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useRef, useState } from "react";
 
 const sections = [
-  { label: "About", id: "about", block: "start" },
-  { label: "Experience", id: "experience", block: "start" },
-  { label: "Projects", id: "projects", block: "start" },
-  { label: "Contact", id: "contact", block: "start" },
+  { label: "About", id: "about" },
+  { label: "Experience", id: "experience" },
+  { label: "Projects", id: "projects" },
+  { label: "Contact", id: "contact" },
 ] as const;
 
 // Top navigation bar component
@@ -27,9 +27,17 @@ export default function Navbar() {
     const largeWidth = useMediaQuery("(min-width:600px)");
     
     // Scroll to section by id
-    const scrollTo = (id: string, block: "start" | "end", withDrawer: boolean = false) => {
+    const scrollTo = (id: string, withDrawer: boolean = false) => {
         const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth", block });
+        if (el) {
+            // Calculate offset to account for fixed navbar
+            const appBar = document.querySelector("header");
+            const yOffset = appBar ? -(appBar.clientHeight + 8) : -64;
+
+            // Scroll to element with offset
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
         if (withDrawer) setDrawerOpen(false);
     };
 
@@ -74,7 +82,7 @@ export default function Navbar() {
 
                             {/* Logo */}
                             <Box 
-                                onClick={() => scrollTo('name', 'end')} 
+                                onClick={() => scrollTo('name')} 
                                 sx={{ display: "flex", alignItems: "center" }}
                             >
                                 <Avatar src="/avatar.png" alt="Logo" sx={{ width: 40, height: 40, mx: 1 }} />
@@ -94,7 +102,7 @@ export default function Navbar() {
                                     <Button
                                         key={s.id}
                                         color="inherit"
-                                        onClick={() => scrollTo(s.id, s.block)}
+                                        onClick={() => scrollTo(s.id)}
                                         sx={{ ml: 2 }}
                                     >
                                         {s.label}
@@ -128,7 +136,7 @@ export default function Navbar() {
                         <List sx={{ width: 200 }}>
                             {sections.map((s) => (
                                 <ListItem key={s.id} disablePadding>
-                                    <ListItemButton onClick={() => scrollTo(s.id, s.block, true)}>
+                                    <ListItemButton onClick={() => scrollTo(s.id, true)}>
                                         <ListItemText primary={s.label} />
                                     </ListItemButton>
                                 </ListItem>
