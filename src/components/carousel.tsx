@@ -1,28 +1,30 @@
-import { useTheme } from "@mui/material";
+import { Tooltip, useTheme } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
-// My tech stack logos
+// Tech stack logos
 const logos = [
-    { src: "/logos/js.png", alt: "JavaScript", isDark: true, isLight: true },
-    { src: "/logos/ts.png", alt: "TypeScript", isDark: true, isLight: true },
-    { src: "/logos/nodejs.png", alt: "Node.js", isDark: true, isLight: true },
-    { src: "/logos/react.png", alt: "React", isDark: true, isLight: true },
-    { src: "/logos/angular.png", alt: "Angular", isDark: true, isLight: true },
-    { src: "/logos/nextjs-white.png", alt: "Next.js", isDark: true, isLight: false },
-    { src: "/logos/nextjs-black.png", alt: "Next.js", isDark: false, isLight: true },
-    { src: "/logos/db.png", alt: "Database", isDark: true, isLight: true },
-    { src: "/logos/git.png", alt: "Git", isDark: true, isLight: true },
-    { src: "/logos/docker.png", alt: "Docker", isDark: true, isLight: true },
+    { src: "/logos/js.png", alt: "JavaScript", link: "https://www.javascript.com/", isDark: true, isLight: true },
+    { src: "/logos/ts.png", alt: "TypeScript", link: "https://www.typescriptlang.org/", isDark: true, isLight: true },
+    { src: "/logos/nodejs.png", alt: "Node.js", link: "https://nodejs.org/", isDark: true, isLight: true },
+    { src: "/logos/react.png", alt: "React", link: "https://react.dev/", isDark: true, isLight: true },
+    { src: "/logos/angular.png", alt: "Angular", link: "https://angular.dev/", isDark: true, isLight: true },
+    { src: "/logos/nextjs-white.png", alt: "Next.js", link: "https://nextjs.org/", isDark: true, isLight: false },
+    { src: "/logos/nextjs-black.png", alt: "Next.js", link: "https://nextjs.org/", isDark: false, isLight: true },
+    { src: "/logos/db.png", alt: "Database", link: "https://en.wikipedia.org/wiki/Database", isDark: true, isLight: true },
+    { src: "/logos/git.png", alt: "Git", link: "https://git-scm.com/", isDark: true, isLight: true },
+    { src: "/logos/docker.png", alt: "Docker", link: "https://www.docker.com/", isDark: true, isLight: true },
 ];
 
 type TechCarouselProps = {
-    imgs?: { src: string; alt: string; isDark: boolean; isLight: boolean }[];
+    imgs?: { src: string; alt: string; link: string; isDark: boolean; isLight: boolean }[];
 };
 
 // Image carousel
 export default function TechCarousel({ imgs = logos }: TechCarouselProps) {
     const carouselRef = useRef<HTMLDivElement>(null);
     const [angle, setAngle] = useState(0);
+    const [paused, setPaused] = useState(false);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     // Filter images based on theme
     const theme = useTheme();
@@ -32,8 +34,10 @@ export default function TechCarousel({ imgs = logos }: TechCarouselProps) {
 
     // Rotate
     useEffect(() => {
+        if (paused) return;  // stop animation
+
         let animationFrame: number;
-        let angleLocal = 0;
+        let angleLocal = angle;
 
         const rotate = () => {
             angleLocal += 0.2;
@@ -43,7 +47,7 @@ export default function TechCarousel({ imgs = logos }: TechCarouselProps) {
 
         rotate();
         return () => cancelAnimationFrame(animationFrame);
-    }, []);
+    }, [paused]);
 
     return (
         <div
@@ -89,23 +93,35 @@ export default function TechCarousel({ imgs = logos }: TechCarouselProps) {
                         const sizePercent = Math.max(8, (carouselRef.current?.offsetWidth || 400) / 20 / 400 * 60);
 
                         return (
-                            <img
-                                key={img.alt}
-                                src={img.src}
-                                alt={img.alt}
-                                style={{
-                                    width: `${sizePercent}%`,
-                                    height: "auto",
-                                    position: "absolute",
-                                    left: "50%",
-                                    top: "50%",
-                                    transform: `translateX(${x}px) translateZ(${z}px) translate(-50%, -50%)`,
-                                    WebkitBoxReflect:
-                                        "below 8px linear-gradient(transparent, rgba(0,0,0,0.2))",
-                                    opacity: 0.3 + 0.7 * depthFactor,
-                                    filter: `brightness(${0.5 + 0.5 * depthFactor})`,
-                                }}
-                            />
+                            <Tooltip key={img.alt} title={img.alt} arrow placement="top">
+                                <img
+                                    src={img.src}
+                                    alt={img.alt}
+                                    style={{
+                                        width: hoveredIndex === i ? `${sizePercent * 1.2}%` : `${sizePercent}%`,
+                                        height: "auto",
+                                        filter: `brightness(${hoveredIndex === i ? 1.2 : 0.5 + 0.5 * depthFactor})`,
+                                        transition: "transform 0.1s ease, width 0.1s ease, opacity 0.1s ease",
+                                        cursor: "pointer",
+                                        position: "absolute",
+                                        left: "50%",
+                                        top: "50%",
+                                        transform: `translateX(${x}px) translateZ(${z}px) translate(-50%, -50%)`,
+                                        WebkitBoxReflect:
+                                            "below 8px linear-gradient(transparent, rgba(0,0,0,0.2))",
+                                        opacity: 0.3 + 0.7 * depthFactor,
+                                    }}
+                                    onMouseEnter={() => {
+                                        setPaused(true);        
+                                        setHoveredIndex(i);
+                                    }}
+                                    onMouseLeave={() => {
+                                        setPaused(false);                                  
+                                        setHoveredIndex(null);
+                                    }}
+                                    onClick={() => window.open(img.link, "_blank", "noopener,noreferrer")}
+                                />
+                            </Tooltip>
                         );
                     })}
                 </div>
