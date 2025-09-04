@@ -85,7 +85,7 @@ export default function Navbar() {
                                 onClick={() => scrollTo('name')} 
                                 sx={{ display: "flex", alignItems: "center" }}
                             >
-                                <Avatar src="/avatar.png" alt="Logo" sx={{ width: 40, height: 40, mx: 1 }} />
+                                <Avatar src="/logos/avatar.png" alt="Logo" sx={{ width: 40, height: 40, mx: 1 }} />
                                 {largeWidth && (
                                     <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                                         Portfolio

@@ -44,7 +44,7 @@ export const projects = [
                 <li>Set up Dockerized environments and production CI/CD for consistent, zero-downtime deployments.</li>
             </ul>
         `,
-        image: "/chainportal.jpeg",
+        image: "/logos/chainportal.jpeg",
         tags: ["Node.js", "Angular", "PostgreSQL", "Web3"],
         techStack: ['Angular', 'Nest.js', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker', 'WebSockets', 'Ethereum', 'Solana', 'IPFS'],
         link: "https://chainportal.app",
@@ -226,7 +226,7 @@ export const projects = [
                 Let the adventure begin.
             </p>
         `,
-        image: "/arcade.jpeg",
+        image: "/logos/arcade.jpeg",
         tags: ["Arcade", "Python"],
         techStack: ["Arcade", "Python"],
         link: "",
