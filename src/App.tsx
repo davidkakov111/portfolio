@@ -2,7 +2,6 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { Routes, Route, Navigate } from "react-router-dom";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Navbar from "./components/navbar";
@@ -22,12 +21,7 @@ function App() {
 
       <Box component="main" sx={{ flex: 1 }}>
         <Container maxWidth="lg" disableGutters sx={{ p: "5px" }}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-
-            {/* Route fallback */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <HomePage />
         </Container>
       </Box>
 
