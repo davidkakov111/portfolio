@@ -36,6 +36,7 @@ For instructions on creating a compatible 3D character, see [3D Setup Guide](./3
 ## 📬 Contact
 
 Interested in working together?
-    - [Email](mailto:kovacs.cs.david@gmail.com)
-    - [LinkedIn](https://www.linkedin.com/in/davidkov111/)
-    - [Upwork](https://www.upwork.com/freelancers/~01b1e7ca6298d8da33)
+
+- [Email](mailto:kovacs.cs.david@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/davidkov111/)
+- [Upwork](https://www.upwork.com/freelancers/~01b1e7ca6298d8da33)
