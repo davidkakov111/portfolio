@@ -1,21 +1,41 @@
-# Step-by-step process to prepare a 3D character for the website
-## 1. Capture your model:
-Use a 3D scanner (Polycam, photos, or video) to create a mesh of your upper body.
+# Portfolio Website
 
-## 2. Import into Blender:
-Open the mesh in Blender Desktop.
+A modern and interactive portfolio website built to showcase my skills, experience, and projects.  
+Designed with responsiveness, accessibility, and performance in mind.
 
-## 3. Add Body + Head Bones and Bind:
-In Object Mode → Shift + A → Armature → Single Bone.
-Name it body, place it along the spine up to the base of the neck.
-Enter Edit Mode, select the tip → press E to extrude upward → name this new bone head.
-Back in Object Mode, select the mesh → Shift + select the armature → Ctrl + P → With Automatic Weights.
+## 🚀 Live Demo
+[View Portfolio](https://davidkovacs.vercel.app)
 
-## 4. Weight Paint:
-Paint the head red, body blue, with a smooth gradient on the neck.
-Top menu → Weights → Normalize All to fix overlaps.
+## 🛠️ Tech Stack
+- React with TypeScript
+- Material-UI (MUI)
+- Three.js / 3D interactive elements
+- Responsive design with modern animations
 
-## 5. Test in Pose Mode:
-Select the armature → switch to Pose Mode.
-Rotate the head bone → head should turn smoothly, neck bends naturally, no gaps.
-If cracks appear → refine weights
+## ✨ Features
+- Interactive 3D portrait
+- Animated tech stack carousel
+- Dark/light theme toggle
+- Smooth scrolling navigation
+- Optimized for desktop and mobile
+
+## 📂 Getting Started
+Clone the repo and install dependencies:
+```bash
+git clone https://github.com/davidkakov111/portfolio.git
+cd portfolio
+pnpm install
+pnpm dev
+```
+For instructions on creating a compatible 3D character, see [3D Setup Guide](./3D-SETUP.md).
+
+## 📸 Preview
+
+![Portfolio Preview](./public/preview.jpeg)
+
+## 📬 Contact
+
+Interested in working together?
+    - [Email](mailto:kovacs.cs.david@gmail.com)
+    - [LinkedIn](https://www.linkedin.com/in/davidkov111/)
+    - [Upwork](https://www.upwork.com/freelancers/~01b1e7ca6298d8da33)
