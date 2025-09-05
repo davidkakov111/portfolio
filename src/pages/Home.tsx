@@ -7,7 +7,7 @@ import TechCarousel from "../components/carousel";
 
 // Home page component
 export default function HomePage() {
-    return (<>
+    return (<>        
         {/* Sections */}
         <Hero />
 

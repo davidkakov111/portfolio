@@ -18,7 +18,7 @@ export default function Hero() {
             {/* Name */}
             <Box 
                 id="name"
-                component="p" 
+                component="h1" 
                 sx={{ 
                     fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
                     fontWeight: "bold", 
@@ -32,7 +32,7 @@ export default function Hero() {
 
             {/* Headline / Role */}
             <Box
-                component="p"
+                component="h2"
                 sx={{
                     fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem" },
                     fontWeight: 500,

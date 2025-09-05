@@ -1,0 +1,6 @@
+# Allow all bots to index everything
+User-agent: *
+Disallow:
+
+# Optionally, block private folders
+# Disallow: /admin/
