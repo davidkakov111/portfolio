@@ -44,6 +44,7 @@ export const projects = [
                 <li>Set up Dockerized environments and production CI/CD for consistent, zero-downtime deployments.</li>
             </ul>
         `,
+        slug: 'chainportal',
         image: "/logos/chainportal.jpeg",
         tags: ["Node.js", "Angular", "PostgreSQL", "Web3"],
         techStack: ['Angular', 'Nest.js', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker', 'WebSockets', 'Ethereum', 'Solana', 'IPFS'],
@@ -104,6 +105,7 @@ export const projects = [
                 in the crypto space. Explore its innovative features firsthand or review the source code on GitHub.
             </p>
         `,
+        slug: 'solana-mystery-box-shop',
         image: "/solana.jpeg",
         tags: ["Next.js", "Django", "PostgreSQL", "Web3"],
         techStack: ["Next.js", "JavaScript", "Web3.js", "Django", "Python", "Solana SDK", "PostgreSQL"],
@@ -149,6 +151,7 @@ export const projects = [
                 <li>Ensured a polished UI/UX with lazy loading, slideshows, and responsive design.</li>
             </ul>
         `,
+        slug: 'movie-catalog',
         image: "/movie.png",
         tags: ["Next.js", "PostgreSQL"],
         techStack: [
@@ -181,6 +184,7 @@ export const projects = [
                 seamless and secure data input for financial analytics.
             </p>
         `,
+        slug: 'investment-analytics',
         image: "/investment.png",
         tags: ["React", "Node.js", "PostgreSQL"],
         techStack:  ["TypeScript", "React", "Tailwind CSS", "Node.js", "PostgreSQL"],
@@ -226,6 +230,7 @@ export const projects = [
                 Let the adventure begin.
             </p>
         `,
+        slug: 'animal-invasion',
         image: "/logos/arcade.jpeg",
         tags: ["Arcade", "Python"],
         techStack: ["Arcade", "Python"],

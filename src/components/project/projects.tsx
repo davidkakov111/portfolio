@@ -1,12 +1,33 @@
 import { Box, Card, CardContent, CardMedia, Typography, Chip } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectDetailsModal from "./projectDetails";
 import { projects } from "./projectsData";
+import { scrollToSection } from "../../services/shared";
 
 // Projects section component
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<typeof projects[number] | undefined>(undefined);
+
+    // On mount, check if URL contains project slug
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("project");
+        if (id) {
+            scrollToSection("projects");
+
+            // Open the modal with the project
+            const project = projects.find((p) => p.slug === id);
+            if (project) {
+                setSelectedProject(project);
+
+                // Clean up the url
+                const url = new URL(window.location.href);
+                url.searchParams.delete("project");
+                window.history.replaceState({}, "", url);
+            }
+        }
+    }, []);
 
     return (<>
         <Box sx={{ my: 6 }} id="projects">

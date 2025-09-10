@@ -11,6 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useRef, useState } from "react";
+import { scrollToSection } from "../services/shared";
 
 const sections = [
   { label: "About", id: "about" },
@@ -28,16 +29,7 @@ export default function Navbar() {
     
     // Scroll to section by id
     const scrollTo = (id: string, withDrawer: boolean = false) => {
-        const el = document.getElementById(id);
-        if (el) {
-            // Calculate offset to account for fixed navbar
-            const appBar = document.querySelector("header");
-            const yOffset = appBar ? -(appBar.clientHeight + 8) : -64;
-
-            // Scroll to element with offset
-            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: "smooth" });
-        }
+        scrollToSection(id);
         if (withDrawer) setDrawerOpen(false);
     };
 
