@@ -49,8 +49,7 @@ export const projects = [
         tags: ["Node.js", "Angular", "PostgreSQL", "Web3"],
         techStack: ['Angular', 'Nest.js', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker', 'WebSockets', 'Ethereum', 'Solana', 'IPFS'],
         link: "https://chainportal.app",
-        code: "",
-        learnMore: "https://chainportal.app/learn",
+        code: [{link: 'https://github.com/davidkakov111/ChainPortalSrv', label: 'Backend Code'}, {link: 'https://github.com/davidkakov111/ChainPortalCli', label: 'Frontend Code'}],
         isGame: false,
     },
     {
@@ -110,8 +109,7 @@ export const projects = [
         tags: ["Next.js", "Django", "PostgreSQL", "Web3"],
         techStack: ["Next.js", "JavaScript", "Web3.js", "Django", "Python", "Solana SDK", "PostgreSQL"],
         link: "https://solanamysterybox.vercel.app/",
-        code: "https://github.com/davidkakov111/SolanaMysteryBoxShop",
-        learnMore: "",
+        code: [{link: 'https://github.com/davidkakov111/SolanaMysteryBoxShop', label: 'Code'}],
         isGame: false,
     },
     {
@@ -165,8 +163,7 @@ export const projects = [
             "Vercel"
         ],
         link: "https://mymoviecatalog.vercel.app/",
-        code: "https://github.com/davidkakov111/MovieCatalog",
-        learnMore: "",
+        code: [{link: 'https://github.com/davidkakov111/MovieCatalog', label: 'Code'}],
         isGame: false,
     },
     {
@@ -189,8 +186,7 @@ export const projects = [
         tags: ["React", "Node.js", "PostgreSQL"],
         techStack:  ["TypeScript", "React", "Tailwind CSS", "Node.js", "PostgreSQL"],
         link: "https://romaniancryptoinvestmenttracker.vercel.app",
-        code: "https://github.com/davidkakov111/InvestmentTrackerClient",
-        learnMore: "",
+        code: [{link: 'https://github.com/davidkakov111/InvestmentTrackerServer', label: 'Backend Code'}, {link: 'https://github.com/davidkakov111/InvestmentTrackerClient', label: 'Frontend Code'}],
         isGame: false,
     },
     {
@@ -235,8 +231,7 @@ export const projects = [
         tags: ["Arcade", "Python"],
         techStack: ["Arcade", "Python"],
         link: "",
-        code: "https://github.com/davidkakov111/Game",
-        learnMore: "",
+        code: [{link: 'https://github.com/davidkakov111/Game', label: 'Code'}],
         isGame: true,
     },
 ];

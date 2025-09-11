@@ -13,7 +13,6 @@ import {
 import DownloadIcon from '@mui/icons-material/Download';
 import LanguageIcon from '@mui/icons-material/Language';
 import CodeIcon from '@mui/icons-material/Code';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
 import CloseIcon from "@mui/icons-material/Close";
 
 type Project = {
@@ -22,8 +21,7 @@ type Project = {
   descriptionHtml: string; // HTML string
   techStack: string[];
   link: string;
-  code: string;
-  learnMore: string;
+  code: [{link: string, label: string}];
   isGame: boolean;
 };
 
@@ -138,14 +136,15 @@ export default function ProjectDetailsModal({ project, onClose }: ProjectDetails
                             </Button>
                         ) : null}
                         
-                        {(project?.code || project?.learnMore) && (
-                            <Button
+                        {/* Source code buttons */}
+                        {project?.code.map((codeObj) => <Button
+                                key={codeObj.label}
                                 variant="contained"
-                                href={project?.code || project?.learnMore}
+                                href={codeObj.link}
                                 target="_blank"
                                 sx={{ flex: 1 }}
-                                startIcon={project?.code ? <CodeIcon /> : <MenuBookIcon />}
-                            >{project?.code ? 'Code' : 'Learn'}</Button>
+                                startIcon={<CodeIcon />}
+                            >{codeObj.label}</Button>
                         )}
                     </Stack>
                 </Box>
