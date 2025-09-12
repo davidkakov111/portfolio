@@ -19,7 +19,7 @@ export default function Contact() {
             <Typography variant="h4" fontWeight="bold" mb={2}>
                 Contact Me
             </Typography>
-            <Typography variant="body1" mb={6}>
+            <Typography variant="body1" mb={5}>
                 Interested in working together or have a question? I’m available as an employee, freelancer, or contractor. Click the button below to send me an email directly.
             </Typography>
 
