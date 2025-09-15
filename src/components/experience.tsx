@@ -18,14 +18,14 @@ const experiences = [
         role: "Full Stack Developer",
         company: "Skyint Ltd.",
         period: "Apr 2025 - Present",
-        summary: "At Skyint Ltd, a company delivering software for the European Space Agency and commercial clients, I architected and developed a web platform that automated manual environmental lab workflows, cutting reporting and data processing time by 50% and enabling real-time pollution monitoring.",      
+        summary: "At Skyint Ltd, a company delivering software for the European Space Agency and commercial clients, I architected and developed a web platform that automated manual environmental lab workflows, cutting reporting and data processing time by 50%, saving staff hours weekly and enabling real-time pollution monitoring.",      
         description: {listItems: [
             'Designed and managed the database using PostgreSQL, TimescaleDB, Prisma, and Dravio to handle complex lab and field data.',
             'Built advanced CRUD interfaces that streamlined management of chemical and field measurement records.',
             'Automated DOCX report generation from database data, reducing manual workload and ensuring compliance.',
             'Developed custom Excel importers to integrate diverse lab data formats into a unified system.',
             'Created real-time statistical dashboards for monitoring pollution levels across multiple locations.',
-            'Delivered measurable business impact by reducing manual reporting and data processing time by over 50%.'
+            'Delivered measurable business impact by reducing manual reporting and data processing time by over 50%, saving staff hours weekly.'
         ], techStack: ['TypeScript', 'Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker']},
     },
     {
