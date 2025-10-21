@@ -21,7 +21,7 @@ type Project = {
   descriptionHtml: string; // HTML string
   techStack: string[];
   link: string;
-  code: [{link: string, label: string}];
+  code: {link: string, label: string}[];
   isGame: boolean;
 };
 
