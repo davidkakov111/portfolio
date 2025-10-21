@@ -127,6 +127,27 @@ export const projects = [
         isGame: false,
     },
     {
+        title: "Nexonity",
+        description: "Nexon’s fans needed deeper engagement beyond social media. Nexonity gamifies interaction with location-based challenges and in-app rewards. I built the scalable backend using Node.js, NestJS, and PostgreSQL, enabling secure profiles, real-time rewards, and thousands of active users.",
+        descriptionHtml: `
+            <p>
+                <strong>Nexonity</strong> mobile app transforms fan engagement into interactive, reward-based experiences for an influencer-driven community. 
+                Fans complete location-based challenges, earn in-app currency, and redeem rewards or merchandise — turning participation into real value.
+            </p>
+            <p>
+                I built the backend with <strong>Node.js</strong>, <strong>NestJS</strong>, and <strong>PostgreSQL</strong>, enabling secure authentication, user profiles, 
+                real-time reward tracking, and scalable systems for thousands of users. The architecture supports gamified engagement and sustainable monetization for the brand.
+            </p>
+        `,
+        slug: 'nexonity',
+        image: "/nexonity.webp",
+        tags: ["Node.js", "NestJS"],
+        techStack: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
+        link: "https://play.google.com/store/apps/details?id=ro.nexon.nexoncommunity&hl=en",
+        code: [],
+        isGame: false,
+    },
+    {
         title: "Solana Mystery Box shop",
         description: "The NFT and token ecosystem lacked a fun, gamified way for users to discover digital assets. The Solana Mystery Box Shop introduces a new type of web shop where users can purchase mystery boxes containing NFTs, tokens, or Solana rewards, with QR code payments for a secure and simple experience. This creates an engaging, collectible-driven platform that enriches the ecosystem and encourages user participation.",        
         descriptionHtml: `
@@ -177,27 +198,6 @@ export const projects = [
         techStack: ["Next.js", "JavaScript", "Web3.js", "Django", "Python", "Solana SDK", "PostgreSQL"],
         link: "https://solanamysterybox.vercel.app/",
         code: [{link: 'https://github.com/davidkakov111/SolanaMysteryBoxShop', label: 'Code'}],
-        isGame: false,
-    },
-    {
-        title: "Nexonity",
-        description: "Nexon’s fans needed deeper engagement beyond social media. Nexonity gamifies interaction with location-based challenges and in-app rewards. I built the scalable backend using Node.js, NestJS, and PostgreSQL, enabling secure profiles, real-time rewards, and thousands of active users.",
-        descriptionHtml: `
-            <p>
-                <strong>Nexonity</strong> mobile app transforms fan engagement into interactive, reward-based experiences for an influencer-driven community. 
-                Fans complete location-based challenges, earn in-app currency, and redeem rewards or merchandise — turning participation into real value.
-            </p>
-            <p>
-                I built the backend with <strong>Node.js</strong>, <strong>NestJS</strong>, and <strong>PostgreSQL</strong>, enabling secure authentication, user profiles, 
-                real-time reward tracking, and scalable systems for thousands of users. The architecture supports gamified engagement and sustainable monetization for the brand.
-            </p>
-        `,
-        slug: 'nexonity',
-        image: "/nexonity.webp",
-        tags: ["Node.js", "NestJS"],
-        techStack: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
-        link: "https://play.google.com/store/apps/details?id=ro.nexon.nexoncommunity&hl=en",
-        code: [],
         isGame: false,
     },
     {
@@ -295,6 +295,34 @@ export const projects = [
         techStack:  ["TypeScript", "React", "Tailwind CSS", "Node.js", "PostgreSQL"],
         link: "https://romaniancryptoinvestmenttracker.vercel.app",
         code: [{link: 'https://github.com/davidkakov111/InvestmentTrackerServer', label: 'Backend Code'}, {link: 'https://github.com/davidkakov111/InvestmentTrackerClient', label: 'Frontend Code'}],
+        isGame: false,
+    },
+    {
+        title: "Full-Stack Skeleton",
+        description: "A reusable full-stack foundation that speeds up web app development with secure authentication, role-based access, and modular frontend/backend structure.",
+        descriptionHtml: `
+            <p>
+                <strong>Full-Stack Skeleton Project</strong> solves the problem of repeatedly setting up authentication, user roles, and frontend/backend integration for new projects.
+            </p>
+            <p>
+                Built with Node.js, Express, Passport.js, Prisma/Postgres backend and React + Material UI frontend, it includes email/password & social login, admin role management, profile pages, and reusable components.
+            </p>
+            <p>
+                Outcome: Accelerates development by days, ensures security and maintainability, and provides a trusted, scalable foundation for client projects like <a href="https://davidkovacs.vercel.app/?project=million-dollar-memecoins">Million Dollar Memecoins</a>.
+            </p>
+            <h4>My Role</h4>
+            <ul>
+                <li>Architected full-stack foundation for rapid project setup.</li>
+                <li>Implemented secure auth, role-based admin, and profile systems.</li>
+                <li>Built modular, themeable frontend fully integrated with backend.</li>
+            </ul>
+        `,
+        slug: 'fullstack-skeleton',
+        image: "/fullstack-skeleton.png",
+        tags: ["Node.js", "React"],
+        techStack: ["Node.js", "Express", "TypeScript", "React", "Material UI", "Passport.js", "Prisma", "PostgreSQL"],
+        link: "",
+        code: [{link: "https://github.com/davidkakov111/skeleton-nr-auth", label: "Code"}],
         isGame: false,
     },
     {
