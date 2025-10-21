@@ -26,6 +26,7 @@ export const projects = [
                 <li>Boosts recognition, liquidity, and engagement for memecoin projects.</li>
                 <li>Enables viral marketing via shareable pixel spaces.</li>
                 <li>Ensures trust and transparency with blockchain-backed ownership.</li>
+                <li>Generates up to a million dollars in revenue for the platform owner through pixel sales.</li>
             </ul>
 
             <h4>My Role & Contributions</h4>
@@ -153,6 +154,27 @@ export const projects = [
         isGame: false,
     },
     {
+        title: "Nexonity",
+        description: "Nexon’s fans needed deeper engagement beyond social media. Nexonity gamifies interaction with location-based challenges and in-app rewards. I built the scalable backend using Node.js, NestJS, and PostgreSQL, enabling secure profiles, real-time rewards, and thousands of active users.",
+        descriptionHtml: `
+            <p>
+                <strong>Nexonity</strong> mobile app transforms fan engagement into interactive, reward-based experiences for an influencer-driven community. 
+                Fans complete location-based challenges, earn in-app currency, and redeem rewards or merchandise — turning participation into real value.
+            </p>
+            <p>
+                I built the backend with <strong>Node.js</strong>, <strong>NestJS</strong>, and <strong>PostgreSQL</strong>, enabling secure authentication, user profiles, 
+                real-time reward tracking, and scalable systems for thousands of users. The architecture supports gamified engagement and sustainable monetization for the brand.
+            </p>
+        `,
+        slug: 'nexonity',
+        image: "/nexonity.webp",
+        tags: ["Node.js", "NestJS"],
+        techStack: ["Node.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
+        link: "https://play.google.com/store/apps/details?id=ro.nexon.nexoncommunity&hl=en",
+        code: [],
+        isGame: false,
+    },
+    {// TODO - BUSINES impact driven.
         title: "Hockey Lineup Analyzer",
         description: "A React + TypeScript web app for NHL analysts to quickly evaluate lineups, compare player stats, and assign expert ratings. Interactive dashboards, historical stats, and visual analytics help experts make faster, data-driven decisions with confidence.",
         descriptionHtml: `
