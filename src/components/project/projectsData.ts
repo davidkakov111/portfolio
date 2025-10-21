@@ -248,6 +248,37 @@ export const projects = [
         isGame: false,
     },
     {
+        title: "Székely Google",
+        description: "A digital platform celebrating Székely culture, language, and traditions, featuring a searchable vocabulary, local site directory, and interactive games to engage users and preserve heritage.",
+        descriptionHtml: `
+            <p>
+                <strong>Székely Google</strong> is a multi-feature platform I designed to preserve and promote Székely language and culture. 
+                I built the full-stack architecture for a collaborative vocabulary, local site directory, and gamified learning experiences. <em>(Project under NDA — code and live demo not available.)</em>
+            </p>
+
+            <h4>Key Features</h4>
+            <ul>
+                <li><strong>Digital Vocabulary:</strong> Users submit Székely words with Hungarian equivalents, synonyms, antonyms, and descriptions; admin approval ensures quality.</li>
+                <li><strong>Local Directory & Search:</strong> Optimized search engine for Székely websites, delivering fast, relevant results with advanced query logic.</li>
+                <li><strong>Gamified Learning:</strong> Interactive word games (Gallows, Letter Quiz, Word Connect) with global leaderboards and statistics to encourage engagement.</li>
+            </ul>
+
+            <h4>Impact & Skills</h4>
+            <ul>
+                <li>Built a collaborative, scalable ecosystem for preserving cultural knowledge.</li>
+                <li>Designed efficient search and data management for large, user-generated content.</li>
+                <li>Created engaging gamification with statistics, scoring, and competitive leaderboards.</li>
+            </ul>
+        `,
+        slug: 'szekely-google',
+        image: "/szekely-google.png",
+        tags: ["Node.js", "Angular", "MySQL"],
+        techStack: ["Node.js", "Angular", "TypeScript", "MySQL"],
+        link: "",
+        code: [],
+        isGame: false,
+    },
+    {
         title: "Animal Invasion",
         description: "Discover my inaugural large-scale 2D game coded in Python using the Arcade game developer module. Assume the role of a businessman maneuvering challenges to collect bitcoins while evading perilous creatures.",
         descriptionHtml: `
