@@ -17,6 +17,7 @@ const experiences = [
     {
         role: "Full Stack Developer",
         company: "Skyint Ltd.",
+        logo: "/skyintio_logo.png",
         period: "Apr 2025 - Present",
         summary: "At Skyint Ltd, a company delivering software for the European Space Agency and commercial clients, I architected and developed a web platform that automated manual environmental lab workflows, cutting reporting and data processing time by 50%, saving staff hours weekly and enabling real-time pollution monitoring.",      
         description: {listItems: [
@@ -31,6 +32,7 @@ const experiences = [
     {
         role: "Backend Developer (Freelance)",
         company: "Nexon",
+        logo: "/nexonity.webp",
         period: "Jun 2024 - Sep 2024",
         summary: "As a freelance backend developer, I built the scalable backend for Nexonity, a gamified location-based community app. I designed secure systems to support thousands of users, integrated in-app currency and rewards, and delivered features that boosted engagement, retention, and monetization for an influencer-driven platform.",
         description: {listItems: [
@@ -46,6 +48,7 @@ const experiences = [
     {
         role: "Full Stack Developer",
         company: "Romanian dev agency",
+        logo: "/bogozi-attila.png",
         period: "May 2024 - Apr 2025",
         summary: "Contributed to multiple client projects for a Romanian development agency, including a community-focused search platform, a WordPress-like CMS for eCommerce, and advanced webshop customizations. Delivered solutions that automated workflows, reduced manual intervention, and empowered users with no coding skills to build their own webshops.",        
         description: {listItems: [
@@ -97,7 +100,17 @@ export default function Experience() {
                                     <Typography variant="h6" fontWeight="bold" sx={{ fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }}>
                                         {exp.role}
                                     </Typography>
-                                    <Typography variant="subtitle1" color="text.secondary" sx={{ fontSize: { xs: "0.85rem", sm: "1rem", md: "1.2rem" } }}>
+                                    <Typography
+                                        variant="subtitle1"
+                                        color="text.secondary"
+                                        sx={{ display: "flex", alignItems: "center", gap: 1, fontSize: { xs: "0.85rem", sm: "1rem", md: "1.2rem" } }}
+                                        >
+                                        <Box
+                                            component="img"
+                                            src={exp.logo}
+                                            alt={`${exp.company} logo`}
+                                            sx={{ width: 24, height: 24, objectFit: "contain" }}
+                                        />
                                         {exp.company}
                                     </Typography>
                                     <Typography component="div" variant="body2" sx={{ mt: 1, fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" } }}>
