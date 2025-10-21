@@ -1,5 +1,50 @@
 export const projects = [
     {
+        title: "Million Dollar Memecoins",
+        description: "Million Dollar Memecoins lets memecoin projects showcase their tokens on a 1000×1000 interactive pixel grid across multiple blockchains. Combining the viral concept of the Million Dollar Homepage with memecoin hype, it drives visibility, engagement, and liquidity while offering a playful, gamified experience. Developed as an Upwork client project, delivered end-to-end.",
+        descriptionHtml: `
+            <p>
+                <strong>Million Dollar Memecoins</strong> is a multichain Web3 platform for memecoin owners to advertise tokens via a 1000×1000 interactive pixel grid. Users can display logos, taglines, and links, with optional NFT minting as permanent Soulbound Tokens on Ethereum, Solana, and BSC.
+            </p>
+
+            <h4>Problem / Opportunity</h4>
+            <p>
+                Memecoin projects struggle for visibility, community engagement, and liquidity in a crowded market. Existing platforms lack a gamified, viral way to showcase tokens.
+            </p>
+
+            <h4>Solution</h4>
+            <ul>
+                <li>Interactive pixel grid for purchasing ad spaces.</li>
+                <li>Multichain NFT minting (ETH, SOL, BSC) as Soulbound Tokens.</li>
+                <li>Secure crypto (Nowpayments) and card (Paystack) payments.</li>
+                <li>Gamified onboarding with live previews.</li>
+                <li>Admin dashboard for tracking purchases, payments, and NFT minting.</li>
+            </ul>
+
+            <h4>Impact & Value</h4>
+            <ul>
+                <li>Boosts recognition, liquidity, and engagement for memecoin projects.</li>
+                <li>Enables viral marketing via shareable pixel spaces.</li>
+                <li>Ensures trust and transparency with blockchain-backed ownership.</li>
+            </ul>
+
+            <h4>My Role & Contributions</h4>
+            <ul>
+                <li>Delivered the platform end-to-end for an Upwork client: Node.js + React frontend with interactive pixel grid, live previews, and registration via Web3 wallets, social auth, or email/password.</li>
+                <li>Integrated multichain Web3 NFT minting as Soulbound Tokens on Ethereum, Solana, and BSC.</li>
+                <li>Built secure, scalable payment flows with automated receipts and admin tracking.</li>
+                <li>Produced a polished platform combining gamification, viral marketing potential, and blockchain-backed ownership.</li>
+            </ul>
+        `,
+        slug: 'million-dollar-memecoins',
+        image: "/million-dollar-memecoins.png",
+        tags: ["React", "Node.js", "PostgreSQL", "Web3"],
+        techStack: ["React", "Node.js", "TypeScript", "Web3.js", "Metaplex", "Ethers", "thirdweb", "tronweb", "Ethereum", "Solana", "BSC", "Tron", "NFT", "Paystack", "Nowpayments", "PostgreSQL"],
+        link: "", // TODO - add link after hosting
+        code: [],
+        isGame: false,
+    },
+    {
         title: "ChainPortal",
         description: "Users managing NFTs and tokens across multiple blockchains faced high fees and the hassle of using different platforms. ChainPortal solves this by unifying asset management into one platform, enabling seamless minting and tracking across chains with real-time transparency. Built with Angular, NestJS, PostgreSQL, and Docker for scalability, and automated with CI/CD, it ensures efficient, secure, and cost-effective Web3 asset creation.",
         descriptionHtml: `
