@@ -174,25 +174,27 @@ export const projects = [
         code: [],
         isGame: false,
     },
-    {// TODO - BUSINES impact driven.
+    {
         title: "Hockey Lineup Analyzer",
-        description: "A React + TypeScript web app for NHL analysts to quickly evaluate lineups, compare player stats, and assign expert ratings. Interactive dashboards, historical stats, and visual analytics help experts make faster, data-driven decisions with confidence.",
+        description: "A React + TypeScript app built for a professional NHL analyst to evaluate lineups, rate players, and predict outcomes more accurately. The platform centralized player stats, visual analytics, and expert scoring — improving decision speed and betting profitability by over 10%.",
         descriptionHtml: `
             <p>
-                <strong>Hockey Lineup Analyzer</strong> streamlines NHL lineup analysis with interactive dashboards, player modals, and expert rating tools. Historical stats and visual analytics enable faster, smarter decisions. <em>(Private project under client NDA, no public preview available)</em>
+                <strong>Hockey Lineup Analyzer</strong> was built for a professional sports analyst who needed a faster, data-driven way to evaluate NHL lineups and predict outcomes. 
+                The tool combines historical stats, visual analytics, and expert scoring — helping improve analysis efficiency and profitability by over 10%.
+                <em>(Private project under client NDA, no public preview available)</em>
             </p>
             <h4>My Role</h4>
             <ul>
-                <li>Built full React frontend with TypeScript and ShadCN components.</li>
-                <li>Implemented interactive lineups, player details, and rating system.</li>
-                <li>Designed responsive, expert-focused UI for efficient analysis.</li>
+                <li>Developed full React frontend with TypeScript and ShadCN components.</li>
+                <li>Implemented interactive lineup comparisons, player detail modals, and expert rating tools.</li>
+                <li>Designed a responsive, analyst-focused UI for fast, accurate decision-making.</li>
             </ul>
         `,
         slug: 'hockey-lineup-analyzer',
         image: "/hockey-analyzer.png",
         tags: ["React", "TypeScript"],
         techStack: ["React", "TypeScript", "ShadCN UI", "Charts", "Data visualization"],
-        link: "", 
+        link: "",
         code: [],
         isGame: false,
     },
