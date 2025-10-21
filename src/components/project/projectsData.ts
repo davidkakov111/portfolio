@@ -233,7 +233,7 @@ export const projects = [
         description: "Romanian crypto investors struggle to track transactions and calculate profits or taxes manually. This full-stack platform (React + Tailwind frontend, Node.js + PostgreSQL backend) provides real-time profit and tax insights, secure account handling, and intuitive visualizations, helping users stay compliant, save time, and make informed investment decisions.",
         descriptionHtml: `
             <p>
-                <strong>Investment Analytics</strong> is a full-stack web app built with <strong>TypeScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, and <strong>PostgreSQL</strong>. Romanian crypto investors often struggle to track transactions and calculate profits or taxes manually. This platform solves that by providing real-time profit and tax insights, interactive dashboards, and secure transaction forms, enabling users to manage their investments efficiently and stay compliant with local regulations.
+                <strong>Investment Analytics</strong> is a full-stack web app that I built with <strong>TypeScript</strong>, <strong>React</strong>, <strong>Node.js</strong>, and <strong>PostgreSQL</strong>. Romanian crypto investors often struggle to track transactions and calculate profits or taxes manually. This platform solves that by providing real-time profit and tax insights, interactive dashboards, and secure transaction forms, enabling users to manage their investments efficiently and stay compliant with local regulations.
             </p>
             <p>
                 The backend supports CRUD APIs, user registration, and account management, ensuring seamless, secure data input and reliable financial analytics for informed decision-making.
