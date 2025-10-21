@@ -153,6 +153,28 @@ export const projects = [
         isGame: false,
     },
     {
+        title: "Hockey Lineup Analyzer",
+        description: "A React + TypeScript web app for NHL analysts to quickly evaluate lineups, compare player stats, and assign expert ratings. Interactive dashboards, historical stats, and visual analytics help experts make faster, data-driven decisions with confidence.",
+        descriptionHtml: `
+            <p>
+                <strong>Hockey Lineup Analyzer</strong> streamlines NHL lineup analysis with interactive dashboards, player modals, and expert rating tools. Historical stats and visual analytics enable faster, smarter decisions. <em>(Private project under client NDA, no public preview available)</em>
+            </p>
+            <h4>My Role</h4>
+            <ul>
+                <li>Built full React frontend with TypeScript and ShadCN components.</li>
+                <li>Implemented interactive lineups, player details, and rating system.</li>
+                <li>Designed responsive, expert-focused UI for efficient analysis.</li>
+            </ul>
+        `,
+        slug: 'hockey-lineup-analyzer',
+        image: "/hockey-analyzer.png",
+        tags: ["React", "TypeScript"],
+        techStack: ["React", "TypeScript", "ShadCN UI", "Charts", "Data visualization"],
+        link: "", 
+        code: [],
+        isGame: false,
+    },
+    {
         title: "Movie Catalog",
         description: "Thrilled to present my Movie Catalog project! Built with TypeScript, it offers seamless browsing, personalized user accounts, and an intuitive admin panel. From detailed movie pages to comprehensive analytics, it demonstrates my commitment to leveraging cutting-edge technologies for user-centric applications.",
         descriptionHtml: `
