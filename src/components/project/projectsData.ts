@@ -46,6 +46,32 @@ export const projects = [
         isGame: false,
     },
     {
+        title: "Environmental Lab Automation",
+        description: "Manual lab workflows caused delays and inefficiencies in processing environmental data. I built a full-stack web platform that automated data entry, report generation, and analytics, reducing processing time by 50% and enabling real-time pollution monitoring for faster, data-driven decision-making.",
+        descriptionHtml: `
+            <p>
+                <strong>Environmental Lab Automation</strong> addresses inefficiencies in manual lab data management. 
+                By automating data collection, Excel imports, and DOCX report generation, it cut reporting and processing time by <strong>50%</strong> 
+                while providing real-time dashboards for environmental monitoring. <em>(Private project under client NDA, no public preview available)</em>
+            </p>
+            <h4>My Role</h4>
+            <ul>
+                <li>Architected and built the full-stack platform end-to-end, including database, backend, and frontend, using Next.js (React - Node.js) and PostgreSQL.</li>
+                <li>Designed the database and server to handle multiple workflow types, including form-based data entry and adapter-based imports, storing diverse lab data with complex relationships.</li>
+                <li>Implemented automated report generation in official DOCX formats by dynamically patching templates with database content, ensuring compliance and saving manual effort.</li>
+                <li>Developed real-time dashboards with advanced statistics and visualizations to provide actionable insights on pollution and lab performance.</li>
+                <li>Delivered a fully automated, scalable system that reduced manual reporting and data processing by over 50%, enabling faster, data-driven decisions.</li>
+            </ul>
+        `,
+        slug: 'environmental-lab-automation',
+        image: "/metrix.png", 
+        tags: ["Next.js", "PostgreSQL"],
+        techStack: ["Next.js", "React", "Node.js", "PostgreSQL", "Prisma", "Docker"],
+        link: "",
+        code: [],
+        isGame: false,
+    },
+    {
         title: "ChainPortal",
         description: "Users managing NFTs and tokens across multiple blockchains faced high fees and the hassle of using different platforms. ChainPortal solves this by unifying asset management into one platform, enabling seamless minting and tracking across chains with real-time transparency. Built with Angular, NestJS, PostgreSQL, and Docker for scalability, and automated with CI/CD, it ensures efficient, secure, and cost-effective Web3 asset creation.",
         descriptionHtml: `
