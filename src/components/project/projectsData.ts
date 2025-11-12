@@ -148,6 +148,28 @@ export const projects = [
         isGame: false,
     },
     {
+        title: "Székely AI",
+        description: "Székely AI is an AI chat platform that understands and responds in the Székely dialect, preserving local language and humor through technology. Built with Node.js, React and OpenAI, it bridges tradition and innovation with a playful, cultural twist.",
+        descriptionHtml: `
+            <p>
+                <strong>SzékelyAI</strong> is an AI chat platform that speaks the <strong>Székely dialect</strong>, blending technology with regional culture. 
+                It uses OpenAI’s language models and custom dialect tuning to create authentic, humorous, and educational interactions.
+            </p>
+            <ul>
+                <li>Built with Next.js, Node.js, and OpenAI API.</li>
+                <li>Promotes Székely language and identity in the digital age.</li>
+                <li>Playable, minimal, and community-driven design.</li>
+            </ul>
+        `,
+        slug: 'szekely-ai',
+        image: "/szekelyai.png",
+        tags: ["Node.js", "React", "OpenAI"],
+        techStack: ["Node.js", "React", "TypeScript", "PostgreSQL", "OpenAI"],
+        link: "https://szekelyai.com",
+        code: [],
+        isGame: false,
+    },
+    {
         title: "Solana Mystery Box shop",
         description: "The NFT and token ecosystem lacked a fun, gamified way for users to discover digital assets. The Solana Mystery Box Shop introduces a new type of web shop where users can purchase mystery boxes containing NFTs, tokens, or Solana rewards, with QR code payments for a secure and simple experience. This creates an engaging, collectible-driven platform that enriches the ecosystem and encourages user participation.",        
         descriptionHtml: `
