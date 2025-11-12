@@ -47,7 +47,7 @@ const experiences = [
     },
     {
         role: "Full Stack Developer",
-        company: "Romanian dev agency",
+        company: "eBusiness consultancy",
         logo: "/bogozi-attila.png",
         period: "May 2024 - Apr 2025",
         summary: "Collaborated on multiple projects with bogozi.com, a Transylvanian eBusiness consultancy, contributing to the development of a community-focused search platform, a WordPress-like CMS for eCommerce, and advanced webshop customizations. Delivered solutions that streamlined workflows, minimized manual tasks, and enabled non-technical users to build and manage their own online stores.",
