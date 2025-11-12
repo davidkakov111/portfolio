@@ -50,7 +50,7 @@ const experiences = [
         company: "Romanian dev agency",
         logo: "/bogozi-attila.png",
         period: "May 2024 - Apr 2025",
-        summary: "Contributed to multiple client projects for a Romanian development agency, including a community-focused search platform, a WordPress-like CMS for eCommerce, and advanced webshop customizations. Delivered solutions that automated workflows, reduced manual intervention, and empowered users with no coding skills to build their own webshops.",        
+        summary: "Collaborated on multiple projects with bogozi.com, a Transylvanian eBusiness consultancy, contributing to the development of a community-focused search platform, a WordPress-like CMS for eCommerce, and advanced webshop customizations. Delivered solutions that streamlined workflows, minimized manual tasks, and enabled non-technical users to build and manage their own online stores.",
         description: {listItems: [
             'Developed a custom CMS (similar to WordPress) in Angular, enabling non-technical users to build and fully customize their own eCommerce webshops through an admin panel.',
             'Designed and implemented scalable backend systems with Node.js, integrating both MySQL and PostgreSQL databases.',
