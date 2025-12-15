@@ -41,7 +41,7 @@ export const projects = [
         image: "/million-dollar-memecoins.png",
         tags: ["React", "Node.js", "PostgreSQL", "Web3"],
         techStack: ["React", "Node.js", "TypeScript", "Web3.js", "Metaplex", "Ethers", "thirdweb", "tronweb", "Ethereum", "Solana", "BSC", "Tron", "NFT", "Paystack", "Nowpayments", "PostgreSQL"],
-        link: "", // TODO - add link after hosting
+        link: "https://milliondollarmemecoins.com/",
         code: [],
         isGame: false,
     },
