@@ -1,5 +1,52 @@
 export const projects = [
     {
+        title: "AI Document Generator",
+        description: "Built an AI-assisted document generation system that transforms technical requirements into structured engineering documents, reducing hours of repetitive manual work while maintaining a consistent document structure. Designed for ECSS-compliant aerospace documentation, but based on techniques applicable to large-scale document automation.",
+        descriptionHtml: `
+            <p>
+                <strong>AI Document Generator</strong> is an AI-powered platform that automates the creation of structured engineering documentation from technical proposals and Statements of Work. Rather than relying on a single LLM prompt, it uses a multi-stage AI pipeline to generate consistent, review-ready document foundations while overcoming common long-context limitations of large language models.
+            </p>
+
+            <h4>Problem</h4>
+            <p>
+                Large engineering projects require extensive technical documentation that is time-consuming and repetitive to produce manually. Creating ECSS-compliant documents requires extracting information from multiple sources while maintaining strict document structure, terminology, and consistency throughout hundreds of pages.
+            </p>
+
+            <h4>Solution</h4>
+            <ul>
+                <li>Automated generation of structured engineering document foundations from project proposals and Statements of Work.</li>
+                <li>Multi-stage AI workflow that extracts, structures, and generates document sections independently.</li>
+                <li>Programmatic document assembly to enforce deterministic document structure and consistency.</li>
+                <li>Automatic identification of missing or low-confidence information instead of generating unsupported content.</li>
+                <li>Designed to significantly reduce repetitive documentation work while keeping engineers in control of the final review.</li>
+            </ul>
+
+            <h4>Technical Challenges</h4>
+            <ul>
+                <li>Processing documents that exceed a single LLM context window.</li>
+                <li>Designing a scalable multi-stage AI pipeline instead of relying on a single prompt.</li>
+                <li>Building a structured intermediate representation to maintain consistency across generated sections.</li>
+                <li>Breaking document generation into focused AI stages to reduce hallucinations.</li>
+                <li>Generating deterministic, review-ready engineering documentation through code-driven assembly.</li>
+            </ul>
+
+            <h4>My Role & Contributions</h4>
+            <ul>
+                <li>Designed and developed the complete platform end-to-end, including backend architecture, AI workflow orchestration, and document generation pipeline.</li>
+                <li>Architected a multi-stage AI system for long-document processing, structured data extraction, and section-by-section document generation.</li>
+                <li>Implemented programmatic document assembly to guarantee consistent structure instead of relying solely on LLM output.</li>
+                <li>Built a robust workflow capable of handling complex engineering documentation while minimizing AI context limitations and hallucinations.</li>
+            </ul>
+        `,
+        slug: "ai-document-generator",
+        image: "/ecss-doc-gen.png",
+        tags: ["AI", "React", "Node.js", "PostgreSQL"],
+        techStack: ["LLMs", "TypeScript", "React", "Node.js", "Prompt Engineering", "Document Processing", "PostgreSQL"],
+        link: "https://ecssdoc.vercel.app",
+        code: [],
+        isGame: false,
+    },
+    {
         title: "Million Dollar Memecoins",
         description: "Million Dollar Memecoins lets memecoin projects showcase their tokens on a 1000×1000 interactive pixel grid across multiple blockchains. Combining the viral concept of the Million Dollar Homepage with memecoin hype, it drives visibility, engagement, and liquidity while offering a playful, gamified experience. Developed as an Upwork client project, delivered end-to-end.",
         descriptionHtml: `
