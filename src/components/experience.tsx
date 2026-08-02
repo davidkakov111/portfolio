@@ -21,7 +21,7 @@ const experiences = [
         period: "Apr 2025 - Present",
         summary: "At Skyint Ltd., a company delivering software for the European Space Agency and commercial clients, I contribute to multiple full-stack software projects ranging from lab workflow automation to space industry applications. My work includes architecting scalable systems, automating complex business processes, and building solutions that improve operational efficiency and reduce manual work.",
         description: {listItems: [
-            'Contributed to multiple commercial and ESA-related software projects, developing scalable full-stack applications with TypeScript, Next.js, React, Node.js, and PostgreSQL.',
+            'Contributed to multiple commercial and ESA-related software projects, developing scalable full-stack applications within the TypeScript ecosystem.',
             'Developed software for a distributed microservice architecture using asynchronous communication, well-defined service interfaces, and scalable backend design.',
             'Worked with PostgreSQL and TimescaleDB to design and optimize data models for complex business and engineering domains.',
             'Gained experience with ECSS engineering documentation, proposal workflows, and software development practices used in the space industry.',
