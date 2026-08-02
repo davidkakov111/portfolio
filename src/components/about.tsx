@@ -32,10 +32,10 @@ export default function About() {
                     }}
                 >
                     I’m David Kovacs — a Full-Stack Developer specialized in the TypeScript and JavaScript
-                    ecosystem (React, Node.js, Next.js, Angular). I build fast, scalable 
-                    and maintainable applications that reduce manual work and boost efficiency. 
-                    I’ve worked on modern web apps, automated workflows, and even Web3 projects, 
-                    always focusing on delivering solutions that directly support business goals.
+                    ecosystem. I build AI-powered, scalable web applications and workflow automation systems 
+                    that reduce manual work and improve operational efficiency. My experience spans modern 
+                    SaaS platforms, Web3 applications, and software for the space industry, always focusing 
+                    on delivering measurable business value.
                 </Typography>
             </Container>
         </Box>
