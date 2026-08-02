@@ -19,14 +19,14 @@ const experiences = [
         company: "Skyint Ltd.",
         logo: "/skyintio_logo.png",
         period: "Apr 2025 - Present",
-        summary: "At Skyint Ltd, a company delivering software for the European Space Agency and commercial clients, I architected and developed a web platform that automated manual environmental lab workflows, cutting reporting and data processing time by 50%, saving staff hours weekly and enabling real-time pollution monitoring.",      
+        summary: "At Skyint Ltd., a company delivering software for the European Space Agency and commercial clients, I contribute to multiple full-stack software projects ranging from lab workflow automation to space industry applications. My work includes architecting scalable systems, automating complex business processes, and building solutions that improve operational efficiency and reduce manual work.",
         description: {listItems: [
-            'Designed and managed the database using PostgreSQL, TimescaleDB, Prisma, and Dravio to handle complex lab and field data.',
-            'Built advanced CRUD interfaces that streamlined management of chemical and field measurement records.',
-            'Automated DOCX report generation from database data, reducing manual workload and ensuring compliance.',
-            'Developed custom Excel importers to integrate diverse lab data formats into a unified system.',
-            'Created real-time statistical dashboards for monitoring pollution levels across multiple locations.',
-            'Delivered measurable business impact by reducing manual reporting and data processing time by over 50%, saving staff hours weekly.'
+            'Contributed to multiple commercial and ESA-related software projects, developing scalable full-stack applications with TypeScript, Next.js, React, Node.js, and PostgreSQL.',
+            'Developed software for a distributed microservice architecture using asynchronous communication, well-defined service interfaces, and scalable backend design.',
+            'Worked with PostgreSQL and TimescaleDB to design and optimize data models for complex business and engineering domains.',
+            'Gained experience with ECSS engineering documentation, proposal workflows, and software development practices used in the space industry.',
+            'Architected and developed an environmental laboratory automation platform, reducing reporting and data processing time by over 50% through workflow automation and document generation.',
+            'Built production-ready software with a strong focus on maintainability, automated workflows, testing, documentation, and long-term scalability.'
         ], techStack: ['TypeScript', 'Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma', 'Docker']},
     },
     {
